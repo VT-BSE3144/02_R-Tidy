@@ -1,0 +1,570 @@
+---
+title: "01-1_R_Rstudio_Tidy_intro"
+format: html
+editor: visual
+---
+
+# **Week 1 - Begins today!**
+
+This first week of our course (today through next Friday morning) we will explore concepts related to data organization. Boring? Possibly. Critical? Absolutely. Over the next week, you have a reading, exercises, and a homework that synthesizes what you will learn.
+
+Material for this coming week was just posted on Canvas. We've tried to make the organization and navigation easy. We will use the "BSE3144 Weekly Schedule" Google sheet to link to content for each week, and you'll upload assignments to Canvas for grading. As a reminder for the general workflow, see the table below. My graduate students asked what in the world the tree/park bench represented - playtime. I truly believe it's important to balance your school work, paid work, other
+
+obligations, and play time - thus I try to include a little play every day (for me it's usually strolling around the neighborhood or playing legos/duplos with my daughters).
+
+I'm still deciding whether to use Canvas or another discussion board tool for the class. If you've used Piazza in other classes, I'd be interested in hearing about your experience. We could also make a Slack or Microsoft Team. Many of you were interested in the Google group email board, so I'll give that a try for announcements. We're also still working on office hours, more to follow.
+
+With respect to next week, come prepared with questions about this initial letter, the reading, and the lesson for this coming week. We'll work through some exercises on Monday, and then on Wednesday, you will have most of the time to work on your homework.
+
+General weekly flow for each topic (due to Spring Break, the schedule will being to vary in March)
+
+|                    |                                                                                                               |
+|--------------------|---------------------------------------------------------------------------------------------------------------|
+| **Day**            | **Task**                                                                                                      |
+| Day 0 (Friday):    | short video / reading material available to watch/read prior to Monday 11:15                                  |
+| Day 1 - 3:         | review out of class material & bring questions to class; and play                                             |
+| Day 3 (Monday):    | Submit pre-class assignment; Q/A on pre-class material; in-class short presentation; Exercise and code-alongs |
+| Day 4 (Tuesday):   | More in-class exercise and start assignment                                                                   |
+| Day 5 (Wednesday): | (some BSE team building); work on exercises and assignment; answer questions                                  |
+| Day 6 (Thursday):  | Finish exercise assignment, due at midnight 12 AM                                                             |
+| Day 7 (Friday):    | Begin working on next week's pre-class material                                                               |
+
+## **ABOUT YOU**
+
+As of 10 AM today, 34/46 of you have filled out the survey. There's still time to fill it out---why will it be valuable? I will use your feedback to guide the teaching methods and organization for the semester---we are all here to learn and everyone learns a little differently. I will ask for your feedback and thoughts at several points through the semester so we can adapt as we move through the course. First off, the majority of you are sophomores in our program, and about 1/4 are juniors with a handful of seniors.
+
+## **BSE Areas**
+
+There is a pretty nice split with a little more than 1/4 of you interested in Biotech/Biomanufacturing or Pharmaceuticals, another 1/4 in Water and Environmental Engineering, and the last not-quite-1/4 is split between medicine, medical devices, and dentistry or food and beverage industries. 
+
+## **Experience with programming**
+
+Not quite half of you have had some prior programming experience. So partner
+
+programming activities will hopefully help you all pick up some skills from your colleagues' prior knowledge. Although we've designed this course to be largely
+
+independent of prior programming knowledge and experience.
+
+## **Experience in R**
+
+As expected the vast majority of you have no prior experience with R. This is good, we are all starting from the same point roughly and will learn best practices and the tools for "learning how to learn in R-Studio together. (R-Studio may change names to Posit soon, the company used to be called R-Studio, but this past year change to Posit, to be more inclusive of Python and other languages).
+
+## **Likes**
+
+Many of you are excited about the flipped classroom and pair/group programming. I'm excited to hear you are excited, this is a very fun and effective way to learn programming and languages. I appreciate how many of you value having recorded lectures and will do my best to record explanations of examples during our flipped class sessions. Be sure to remind me to restart the recording if I forget! 
+
+## **Dislikes**
+
+The flipped classroom and lots of group work also generate some anxiety because "flipped" is new for many of you, and you have some "history" with group work. My hope and experience in the past (and actually a lot of the teaching research, this field is called "pedagogy") is that flipped classrooms decrease anxiety and increase equity in group work. This is because you have support of your pair programming partner, as well as other pairs around you. You are learning as a team in class and will hopefully find a supportive and productive niche in the classroom.
+
+There were a few asks for the materials for the upcoming week to be released sooner than Thursday midnight. I will certainly do my best to get up the upcoming weeks as soon as I can if you want to work ahead a bit. This should be very doable, as most of the material is developed already, I just need to review and update.
+
+There are also lots of concerns about Thursday midnight due dates. Let's see how this goes for a week or two and we can potentially revisit. I am hoping that many of you will be able to finish most of the homework by the end of class on Wednesday or soon after so the Thursday deadlines won't feel as bad as they seem in a "normal" class.
+
+The rest of this intro is devoted basic tutorials on R programming and Rstudio as well as Tidy Data. Here's the thing - to learn programming and get comfortable, you'll need to work at it! If you attempt to plow through in one sitting, unless you're a genius, you're unlikely to retain much. My suggestion is to start working early - start with either watching the assigned video or the reading. I've noted that you can choose one or the other; for extra reinforcement, read and watch (the video is only 15 minutes)! Then go ahead and get started with the SWIRL lessons. This 'out-of-class work' is on our shared Rstudio landing page and is named 02.1_Prework (02 for week 2, .1 for task 1). I'm not going to expect you to remember every last detail; however, the more time you put in now (even by doing the assigned SWIRL lessons 2 or 3 times), the more comfortable you'll be this coming week and throughout the semester. If you like analogies, now's the time to get the garden planted - it'll take a lot of work, but once planted you'll have a great foundation for success, and with regular care each week you will have a bountiful harvest by the end of the semester. 
+
+This week's schedule with links can be found [here](https://docs.google.com/spreadsheets/d/1SrTipmDhY4nloYDEanIAsKIIiOC3FSJXAuL-PaG921g). There are so many excellent resources to augment what we're working together on learning. If you want to dive deeper, check out this freely available online resource - [R for Data Science](https://r4ds.had.co.nz). Also check out the [Posit Cloud Primers](https://posit.cloud/learn/primers), particularly the Basics lesson. Lastly, I hope you all take time to reflect on this week, make adjustments, think about your time management, and lastly make some time to relax and unwind. 
+
+## Reading and Pre-class Materials
+
+### Data Organization in Spreadsheets
+
+Spreadsheets are commonly employed software applications for entering, storing, analyzing, and visualizing data. Concentrating on the data entry and storage components, this [article](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) provides practical suggestions on structuring spreadsheet data to minimize errors and facilitate subsequent analyses.
+
+### **The Great R Onboard**
+
+This week, we'll begin exploring Rstudio! Below are the tasks to complete prior to class on Monday:
+
+1\. Get onto Rstudio.cloud
+
+-   Join our Posit/R-studio class workspace by navigating to [our Posit/R-Studio Class Page](https://rstudio.cloud/spaces/115479/join?access_code=JeYI4YgsyjXI2Qq765aRclwDhfB6K0KsUIXRVngz) and following the directions to sign up for a Posit Cloud account (a free account is all you need for this class) and then join our class workspace. 
+
+2\. Reading - choose 1 based on your learning style:
+
+-   Read "Why Learn R" -  [data carpentry](https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html)
+
+-   Watch video on R primer - [RUwithMe](https://www.youtube.com/watch?v=kfcX5DEMAp4)
+
+\* Whichever one you choose, I'd recommend opening up Posit/R-studio Cloud and following along with the reading material/video. For most of the content, you can duplicate the exercises in Rstudio. For example, once you create a student account in Rstudio.cloud, you'll be able to create your own project (RUwithMe covers this aspect)
+
+-   Question: Why is R a powerful program for data analysis, what did you get out of it the video or why learn R?
+
+3\. Work through the SWIRL lessons
+
+[This document](https://drive.google.com/file/d/1620rBSDhggwLBm6EO4-mIjijHT-E6z-6/view?usp=sharing)explains what you'll want to do in this "assignment". You can find [the source for this document](https://posit.cloud/spaces/115479/content/2122430) in posit cloud as well and run the swirl package lessons there.  The concept is that these lessons and developing a cheatsheet will reinforce what you read/watched, and help build up your skills. Prior to class on Monday, please complete the SWIRL lessons. The "assignment" is on our posit cloud course page as linked above. Note, "assignments" in posit cloud are just a project that will automatically save a version of the project to your workspace that the instructional team can see. 
+
+4\. In-Class
+
+In class, we'll work [through some exercises](https://drive.google.com/file/d/1l1IMgt26veLmJyRx4JYGKDTQTpXfNVo-/view?usp=sharing) that reinforce your learning. Ultimately, these exercises will be turned in for your homework. You'll open up [the project in posit cloud for this week](https://posit.cloud/spaces/115479/content/2122430) and work on the in-class exercises and homework there. In the Files pane you will find the In-Class assignment "Week2_InClass.Rmd". 
+
+5\. Homework
+
+This week's homework assignment can be found [here as a pdf](https://drive.google.com/file/d/1l4SebGYKO0huYwpz_J1T0T3p09m2W_fw/view?usp=sharing). The markdown file is stored in this week's project on Posit/Rstudio Cloud. You'll turn in a knitted pdf document following the example for exercise 1 (see here; the markdown file is located in the files for this week's project). The output for each exercise can be [found here](https://drive.google.com/file/d/1l88I-UU1TKERuzBqxvb-ZnnbbPu8qfqU/view?usp=sharing). You'll do all 7 exercises for homework from a single markdown file, separating each using the \## as discussed in class, and then knit this into a pdf to upload to canvas.
+
+Have a great weekend! Post any questions you might have either on Canvas Discussions or in response to the Google group email I will send.
+
+Cheers,
+
+*Your Teaching Team*
+
+## R and Rstudio Basics
+
+### **Read a CSV file (.csv)**
+
+You want to read a CSV file into your R session, where you can manipulate its contents. The file has the extension .csv. A CSV file is a text file that contains a table whose values are separated by commas, i.e. a **C**omma **S**eparated **V**alues file.
+
+**Step 1 - Call `readr::read_csv()`.** `read_csv()` is designed to read in .csv files with `,` as the field separator.
+
+**Step 2 - Give `read_csv()` the filepath to your file as a character string.** R will read the filepath as if it begins at your working directory. For example:
+
+```         
+read_csv("my/file.csv")
+```
+
+**Step 3 - Save the output to an object**, so you can access it later.
+
+```         
+csv_table <- read_csv("my/file.csv")
+```
+
+#### **Example**
+
+We want to read in the dorught records dataset which is a CSV file. We have this file saved on cloud at /data/Drought_paneldata.csv.
+
+We begin by loading the readr package which contains `read_csv()`. Next, we pass `read_csv()` the filepath for our CSV file in order to read in the dataset. The file is in the data folder. The output looks like this:
+
+```{r}
+library(readr) 
+read_csv("data/Drought_paneldata.csv")
+
+```
+
+Notice that `read_csv()` automatically chose intelligent data types for each of the columns.
+
+Lastly, we assign the dataset read in by `read_csv()` to an object, `Drought_rec`, so we can access it later.
+
+```{r}
+Duoght_rec <- read_csv("data/Drought_paneldata.csv")
+Duoght_rec
+```
+
+`read_csv()` comes with many arguments that you can use to customize which parts of the file will be read in and how. Here are a few of the most useful:
+
+| Argument    | Description                                                                                                          |
+|-------------|----------------------------------------------------------------------------------------------------------------------|
+| `col_names` | Should the first row be read in as column names? Defaults to `TRUE`. Can also be a character vector of column names. |
+| `col_types` | Explicitly set the data type for each column.                                                                        |
+| `skip`      | Number of rows to skip before reading any data.                                                                      |
+| `guess_max` | Maximum number of lines to read for guessing column types.                                                           |
+
+Read the help page at `?read_csv` to learn more.
+
+### **Read a character-delimited file (.txt)**
+
+You want to read a delimited data file into your R session, where you can manipulate its contents. The file typically has the file extension .txt. Within each row of a delimited file, the column fields are separated by a character delimiter. Some common choices for the delimiter are `|`, `:`, `;`, `,`, or `~`.
+
+**Step 1 - Call `readr::read_delim()`.**
+
+**Step 2 - Give `read_delim()` the filepath to your dataset as a character string.** For example:
+
+```         
+read_delim("my/file.txt")
+```
+
+**Step 3 - Specify the `delim` argument** to tell `read_delim()` the delimiter character.
+
+```         
+read_delim("my/file.txt", delim = ",")
+```
+
+**Step 4 - Save the output to an object**, so you can access it later.
+
+```         
+delim_table <- read_delim("my/file.txt", delim = ",")
+```
+
+#### **Example**
+
+We want to read in the drought records dataset in text format which is a delimited dataset .txt file and uses the delimiting character `,`. This dataset contains drought/heat hazard records and associated weather characteristics for different dates and counties in Delmarva Peninsula. We have this file saved on cloud as data/Drought_paneldatatx.txt.
+
+We begin by loading the readr package which contains `read_delim()`. Then, we pass `read_delim()` the filepath for our .txt file in order to read in the dataset. The file is in the data folder in our working directory. The output looks like this:
+
+```{r}
+library(readr) 
+read_delim("data/Drought_paneldatatx.txt", delim = ",")
+```
+
+Notice that `read_delim()` automatically chose intelligent data types for each of the columns.
+
+Lastly, we assign the solar dataset read in by `read_delim()` to an object, `solar`, so we can access it later.
+
+```{r}
+data <- read_delim("data/Drought_paneldatatx.txt", delim = ",")
+```
+
+**`read_delim()` is a more general case of `readr::read_csv()` and `readr::read_tsv()`**
+
+`read_csv()` is the equivalent of calling `read_delim()` with `delim = ","`. `read_tsv()` is the equivalent of `read_delim()` with `delim - "\t"`.
+
+### **Read an Excel file (.xls, .xlsx)**
+
+You want to read a Microsoft Excel file into your R session, where you can manipulate its contents. The file has the extension .xls or .xlsx.
+
+**Step 1 - Call `readxl::read_excel()`.** `read_excel()` is designed to read in .xls or .xlsx files.
+
+**Step 2 - Give `read_excel()` the filepath to your file as a character string.** For example:
+
+```         
+read_excel("my/file.xlsx")
+```
+
+**Step 3 - Specify the sheet you want to read in with the `sheet` argument.** By default, `read_excel()` reads in the first sheet of an Excel file. You can set `sheet` to the name of a different sheet (as a character string) or the location of a different sheet (as a number).
+
+```         
+read_excel("my/file.xlsx", sheet = "Sheet_B")
+```
+
+**Step 4 - Save the output to an object**, so you can access it later.
+
+```         
+xl_table <- read_excel("my/file.xlsx", sheet = "Sheet_B")
+```
+
+#### **Example**
+
+We want to read in an hazards dataset which is a Excel file containing financial agricultural loss records and associated weather conditions for three types of climatic hazards. Hazard column defines the hazard type (drought, storm, heat). We have saved the dataset on cloud at /data/hazards.xlsx.
+
+We begin by loading the readxl package which contains `read_excel()`. Next, we pass `read_excel()` the filepath for our Excel file in order to read in the dataset. The file is in our working directory, therefore we do not need the entire filepath. We only need the portion that goes from our working directory to the file. The output looks like this:
+
+```{r}
+library(readxl) 
+read_excel("data/hazards.xlsx")
+```
+
+Looking at the "Hazard" column of the data frame, we realize `read_excel()` automatically read in the first sheet of the file. We are looking for data on storm hazard events, not drought. However, we cannot remember what the sheet was named. We can call `readxl::excel_sheets()` on the filepath to see the names of the sheets in the "hazards" file.
+
+```{r}
+excel_sheets(path = "data/hazards.xlsx")
+```
+
+Now we can see that we wanted to read in Sheet 2 from the file. We can do this by specifying the `sheet` argument in `read_excel()`.
+
+```{r}
+read_excel(path = "data/hazards.xlsx", sheet = 2)
+```
+
+Lastly, we assign the earthquake data frame read in by `read_excel()` to an object so we can access it later.
+
+```{r}
+storm <- read_excel(path = "data/hazards.xlsx", sheet = 2)
+```
+
+`read_excel()` comes with many arguments that you can use to customize which parts of the spreadsheet will be read in and how. Here are a few of the most useful:
+
+| Argument    | Description                                                                                                          |
+|-------------|----------------------------------------------------------------------------------------------------------------------|
+| `col_names` | Should the first row be read in as column names? Defaults to `TRUE`. Can also be a character vector of column names. |
+| `col_types` | Explicitly set the data type for each column.                                                                        |
+| `skip`      | Number of rows to skip before reading any data.                                                                      |
+| `range`     | Specify a subset of cells to read in.                                                                                |
+
+Read the help page at `?read_excel` to learn more.
+
+### **Arithmetic with single numbers**
+
+You want to use R to do simple arithmetic, as if R were a calculator.
+
+**Step 1 - Write the mathematical expression you wish to evaluate.** R recognizes the following operators:
+
+| Operator | Operation        | Example                                                            |
+|----------|------------------|--------------------------------------------------------------------|
+| `+`      | Addition         | `1 + 2`                                                            |
+| `-`      | Subtraction      | `2 - 1`                                                            |
+| `*`      | Multiplication   | `2 * 3`                                                            |
+| `/`      | Division         | `4 / 2`                                                            |
+| `^`      | Exponentiation   | `4 ^ 2`, i.e. 4242                                                 |
+| `%%`     | Modulo           | `5 %% 3`, i.e what is the remainder when you divide five by three? |
+| `%/%`    | Integer division | `5 %/% 3`, i.e how many times does three go into five?             |
+
+**Step 2 - Run the expression.** R will return the result.
+
+#### **Example**
+
+Suppose we want to divide the difference between `111` and `75` by `3`.
+
+Using the operators above, we can write `111 - 75 / 3`, but R will evaluate this as `111` minus `75 / 3`
+
+```{r}
+111 - 75 / 3
+```
+
+R isn't doing anything funny, R is just following the standard order of mathematical operations. To correct the order of operations, we add parentheses.
+
+```{r}
+(111 - 75) / 3
+```
+
+**Remember PEMDAS**
+
+PEMDAS is an acronym that describes the order of operations in arithmetic. We first evaluate expressions that are grouped together by *P*arentheses. Next, we evaluate *E*xponentiation, followed by *M*ultiplication or *D*ivision. Finally, we evaluate *A*ddition and *S*ubtraction.
+
+Use `(` and `)` when you need to control the order of mathematical operations in R.
+
+### **Call a function on a number**
+
+R provides thousands of *functions* to use. Functions are prepackaged pieces of code that perform useful tasks. To use a function in R:
+
+**Step 1 - Write the name of the function.** Do *not* surround it in quotes. The name tells R which function you would like to run.
+
+**Step 2 - Place a pair of parentheses after the name.** Parentheses are the trigger that runs the function.
+
+**Step 3 - If the function needs a piece of input to do its job, place the input inside of the parentheses.** Your function call will now look something like this, `factorial(4)`.
+
+**Step 4 - Click Run.** Or press Enter if you are using R from a command line. R will run your function and return the result.
+
+#### **Example**
+
+Suppose we'd like to find the square root of `1764`. We can do this with a function named `sqrt`, which is short for *square root*.
+
+To call `sqrt`, we first write its name. Notice that if we run just the name of `sqrt`, R shows us the code associated with `sqrt`. That's not what we want.
+
+```         
+sqrt
+```
+
+```         
+## function (x)  .Primitive("sqrt")
+```
+
+Next, we place a pair of parentheses after `sqrt`. When we click Run, the parentheses will cause R to execute our function. Our function call is not yet complete because `sqrt()` requires a piece of input to do its job. Which number should square root take the square of? If we run our command in this unfinished state, R will return an error message.
+
+```{r}
+sqrt()
+```
+
+We finish our command by giving `sqrt()` a number to take the square of, in this case, `1764`.
+
+```{r}
+sqrt(1764)
+```
+
+Academy authors will use a special convention whenever we mention a function: we will write the function's name in code font and follow it with a pair of parentheses, like this `sqrt()`.
+
+R users have several names for the code that runs a function. You may see it referred to as:
+
+-   A command
+
+-   A function call
+
+-   An expression
+
+Or some variation of the above. They all mean the same thing: a bit of code to run.
+
+Watch our for this common mistake. it is easy to create an error by omitting the *closing parenthesis* of a function call:
+
+```{r}
+sqrt(1764
+```
+
+### **Obey R's naming rules**
+
+You want to give a valid name to an object in R.
+
+**Step 1 - Choose a name that includes valid characters.** Names in R may be made up of three types of characters:
+
+-   Capital and lowercase letters
+
+-   Numbers
+
+-   The symbols `.` and `_`
+
+Other characters are forbidden because we use them *with* names to perform actions. R wouldn't be able to distinguish the name `x+y` from the command `x + y` written without spaces.
+
+**Step 2 - Double-check that the first character is a letter or `.`.** Names in R may not start with a number or `_`, even though these symbols can appear anywhere else in the name.
+
+**Step 3 - Assign an object to the name.** Use the assignment arrow (`<-`) with the name on the left and the object on the right.
+
+#### **Example**
+
+Suppose we'd like to create an object storing the number of trials in an experiment. In our first attempt, we give the object the name `#_of_trials`.
+
+```{r}
+#_of_trials <- 15 
+#_of_trials
+```
+
+This doesn't give us any output, because `#` is not a valid character for an object name. Let's try again, using only valid characters:
+
+```{r}
+number_of_trials <- 15
+number_of_trials
+```
+
+That worked! Now let's record the observed value of our first trial:
+
+```{r}
+1st_trial <- 476.2
+1st_trial
+```
+
+That didn't work either. Even though all the characters were valid, object names can only start with a letter or `.`, not a number or `_`. Let's try again.
+
+```{r}
+first_trial <- 476.2 
+first_trial
+```
+
+Success!
+
+Object names can include capital and lowercase letters in any order, but names in R are case sensitive. Look what happens if you try to get the value of an object with the wrong capitalization:
+
+```{r}
+my_value <- 100
+My_Value
+```
+
+Some names follow all of R's rules, but can't be used because they are reserved for a special purpose. Look what happens if you try to assign an object to the name `TRUE`.
+
+```{r}
+TRUE <- 100
+```
+
+Names like `TRUE`, `FALSE`, `NA`, and `function` can't be assigned to objects, because they already have important uses in R.
+
+### **Run a function**
+
+You want to run a function on a single value, for instance, to perform a calculation.
+
+**Step 1 - Write the name of the function.** Each function in R is saved as an object. To use an object, we call its name.
+
+**Step 2 - Type a pair of parentheses `( )` after the name.** Parentheses tell R that you would like to *run* the function that is stored in the object.
+
+**Step 3 - Place any input inside of the parentheses.** Most functions need a value to do their job, like `abs(-4)` or `round(pi)`.
+
+**Step 4 - Click Run.** Or press Enter if you are using R from a command line. R will run your function and return the result.
+
+#### **Example**
+
+Suppose we want to apply a trigonometric function, like sine, cosine, or tangent, to an angle (in radians). In R, the functions are `sin()`, `cos()`, and `tan()`.
+
+To call cosine, we first write its name.
+
+```{r}
+cos
+```
+
+Next, we place a pair of parentheses after the name. Our call to the `cos()` function is not yet complete, since cosine needs *an angle* to do its computation. If we run our command in this unfinished state, R will return an error message.
+
+```{r}
+cos()
+```
+
+We can complete the command in one of two ways. We can give `cos()` a specific angle to act on, in this case, `0`.
+
+```{r}
+cos(0)
+```
+
+Or we could give `cos()` an object that contains an angle to act on, such as `pi`.
+
+```{r}
+cos(pi)
+```
+
+Some of the most common mathematical functions in R are:
+
+| Function    | Operation         | Example                                                             |
+|-------------|-------------------|---------------------------------------------------------------------|
+| `sin()`     | Sine              | `sin(pi/2)`                                                         |
+| `cos()`     | Cosine            | `cos(3*pi/2)`                                                       |
+| `tan()`     | Tangent           | `tan(pi/4)`                                                         |
+| `sign()`    | Sign              | `sign(-2)`, i.e. is -2 positive or negative?                        |
+| `log()`     | Natural logarithm | `log(2.718282)`                                                     |
+| `exp()`     | Exponential       | `exp(1)`                                                            |
+| `floor()`   | Integer floor     | `floor(pi)`, i.e. what is the largest integer less than `pi`?       |
+| `ceiling()` | Integer ceiling   | `ceiling(pi)`, i.e. what is the smallest integer greater than `pi`? |
+
+### **Create a Table Manually**
+
+You want to create a data frame by typing in each value by hand. This is an alternative to reading a file that contains the data.
+
+**Step 1 - Call `tibble::tibble().`** `tibble()` constructs a tibble, a type of data frame.
+
+**Step 2 - Choose a column name for your tibble.** Pass the name as an argument name to `tibble()`, e.g.
+
+```         
+tibble(col_1)
+```
+
+**Step 3 - Provide a vector of values for the column.** Assign them to the column name, e.g.
+
+```         
+tibble(col_1 = c("a", "b", "c"))
+```
+
+**Step 4 - Repeat for every column in your tibble.** Every column should have the same number of values. If you pass a column a single value, `tibble()` will repeat that value for each row of the data frame.
+
+Remember to separate each new argument/column name with a comma.
+
+**Step 5 - Save the tibble to an object**, so you can access it later.
+
+```         
+data <- tibble(   col_1 = c("a", "b", "c"),   col_2 = 1:3 )
+```
+
+#### **Example**
+
+We want to create a data frame to keep track of:
+
+1.  The teachers at Grove Middle School
+
+2.  The number of students in their classrooms
+
+3.  The grade levels of the students
+
+We begin by loading the tibble package which contains `tibble()`. Next we input our data into `tibble()`. Our tibble will have the column names `teacher`, `class_size`, and `grade` with the values provided below.
+
+```{r}
+library(tibble)
+tibble(teacher = c("Gaines", "Johnson", "Hernandez"),   
+          class_size = c(30, 26, 28),   
+          grade = c(6, 7, 8))
+```
+
+After checking out the created tibble, we realize it would be a good idea to include the school name in the data frame in case we decide to include other schools in the future. If we pass only a single value to this column, R will use its recycling rules to reuse that value for each row in the tibble.
+
+```{r}
+tibble(   teacher = c("Gaines", "Johnson", "Hernandez"),   
+          class_size = c(30, 26, 28),   
+          grade = c(6, 7, 8),   
+          school = "Grove MS")
+```
+
+Lastly, we assign the created tibble to the object, `teachers`, so we can access is later.
+
+```{r}
+teachers <- tibble(   teacher = c("Gaines", "Johnson", "Hernandez"),  
+                      class_size = c(30, 26, 28),   
+                      grade = c(6, 7, 8),   
+                      school = "Grove MS")
+```
+
+**`tribble()`**
+
+You can also define your tibble row by row with `tibble:tribble()`. Place a `~` before each value in the first row to indicate that the values are column names. If you watch your spaces, `tribble()` will provide a low-fi preview of your table as you write it.
+
+```{r}
+tribble(    
+  ~teacher, ~class_size, ~grade,    ~school,    
+  "Gaines",     30,       6,    "Grove MS",   
+  "Johnson",   26,      7, "Grove MS", 
+  "Hernandez",  28,      8, "Grove MS")
+```
+
+**Other ways to read in raw data**
+
+Any of the readr::read\_\* functions, such as `readr::read_csv()` or `readr::read_delim()`, can be used to create a table manually as a character string wrapped in `I()`.
+
+```{r}
+readr::read_csv(I("col_1,col_2\na,1\nb,2\nc,3"))
+```
