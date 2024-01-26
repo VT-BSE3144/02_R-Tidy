@@ -23,7 +23,7 @@ Spreadsheets are commonly employed software applications for entering, storing, 
 -   Watch **a** [video on Tidy data](https://www.google.com/search?sca_esv=601299113&rlz=1C5GCEM_enUS1074US1075&sxsrf=ACQVn0-7iHIDCHJOozW2rO9jp7L-rkFjRg:1706153738901&q=tidy+data&tbm=vid&source=lnms&sa=X&sqi=2&ved=2ahUKEwjd8qf8zfeDAxX2L1kFHSTkDVAQ0pQJegQICBAB&biw=907&bih=822&dpr=2) - The [one from Posit](https://www.youtube.com/watch?v=1ELALQlO-yM&ab_channel=PositPBC), is pretty good, but in the quick check I did all of the first page for my search above were OK.
     -   Whichever reading or video you choose, I'd recommend opening up Posit/RStudio and following along with the reading material/video. For most of the content, you can duplicate the exercises in Rstudio. For example, once you create a student account, you'll be able to create your own project (RUwithMe covers this aspect)
 
-2.  Work through the Posit Cloud R Basics Recipes, which are in this document below and also available here: [Posit Cloud R Basics Recipes](https://posit.cloud/learn/primers).
+2.  Work through the Tidy Data and R Basics intro materials in this document below which are based in part on: [Posit Cloud R Basics Recipes](https://posit.cloud/learn/primers).
 
 Have a great weekend! Post any questions in Teams.
 
@@ -73,16 +73,16 @@ Figure D - Incomplete table, either fill out completely or break into 2 tables. 
 7.  Use a data dictionary. Keep data in a data file, **use a complimentary README file (or a metadata/annotation sheet)** that contains 'metadata'.
 
     -   This should include explanation of the variable, units, expected values (minimum and maximum). It may also include information about how the data was collected and how the experiment was performed.
-    -   [There is an example README](images/VT_COVID-19_Cases_by_County_Time_Series_modify_README.rtf) from the Vermont Covid dashboard in the images folder, "images/VT_COVID-19_Cases_by_County_Time_Series_modify_README.rtf".
+    -   [There is an example README](images/Vermont-COVID-19) from the Vermont Covid dashboard in the images folder, "images/VT_COVID-19_Cases_by_County_Time_Series_modify_README.rtf".
     -   This could be a txt file, rtf, html, csv or any other file type.
 
 8.  Do not perform calculations in **raw data files.** Use a separate file for visualizations, calculations, analysis, etc.
 
 9.  Do not use color or highlighting in data files. Rather, use a column that provides a note instead of highlighting cells. (This is because the color or highlighting is data! Every datum gets its own cell - #2.)
 
-10. Backup data. Use version control---if anything is added, updated, etc save a new version of the file..![](https://lh7-us.googleusercontent.com/ALzSEggRGgFN4VlD80lauv-jPQe7YS74Nuq28XAlFR-FQahwwH9AEBfm-B6fasHsrvF2zuFyy__aRqIi2b32NLg7Xzegare02lgfwiz2IEK9EEKZ9Tg7AI2FXACDQusKmA--YDsg9dM6JZ26XOr0aQs)
+10. Backup data. Use version control---if anything is added, updated, etc save a new version of the file.
 
-11. Validate data. In Excel, Data → Validation (see icon at right), or Data → Data Validation in Google Sheets. Then you can set up logical rules to check that your columns of data contain valid values. Any values that don't pass your logical test will be highlighted. To see the rules you have created [follow these instructions](https://support.microsoft.com/en-us/office/find-cells-that-have-data-validation-rules-7940468a-c95d-422f-a3fb-8fa0b90e5810).
+11. Validate data. Excel, Data → Validation (see icon at right), or Data → Data Validation in Google Sheets. Then you can set up logical rules to check that your columns of data contain valid values (for example a column of percent values should be between 0 and 100). Any values that don't pass your logical test will be highlighted. To see the rules you have created [follow these instructions](https://support.microsoft.com/en-us/office/find-cells-that-have-data-validation-rules-7940468a-c95d-422f-a3fb-8fa0b90e5810). In R you can write code to validate data. More on R code below!
 
 12. Save data in plain text files. Save as -\> Format -\> csv. Why? Simplified archive, preservation of data for future scientists and engineers. When data is saved in a proprietary format, sharing across versions/platforms and the future may be hampered.
 
@@ -101,7 +101,7 @@ You want to use R to do simple arithmetic, as if R were a calculator.
 **Step 1 - Write the mathematical expression you wish to evaluate.** R recognizes the following operators:
 
 | Operator | Operation        | Example                                                            |
-|----------|------------------|--------------------------------------------------------------------|
+|--------------|--------------|---------------------------------------------|
 | `+`      | Addition         | `1 + 2`                                                            |
 | `-`      | Subtraction      | `2 - 1`                                                            |
 | `*`      | Multiplication   | `2 * 3`                                                            |
@@ -187,7 +187,7 @@ We finish our command by giving `sqrt()` a number to take the square of, in this
 sqrt(1764)
 ```
 
-Academy authors will use a special convention whenever we mention a function: we will write the function's name in code font and follow it with a pair of parentheses, like this `sqrt()`.
+In markdown we will use a special convention whenever we mention a function: we will write the function's name in code font and follow it with a pair of parentheses, like this `sqrt()`.
 
 R users have several names for the code that runs a function. You may see it referred to as:
 
@@ -483,7 +483,7 @@ cos(pi)
 Some of the most common mathematical functions in R are:
 
 | Function    | Operation         | Example                                                             |
-|-------------|-------------------|---------------------------------------------------------------------|
+|--------------|--------------|--------------------------------------------|
 | `sin()`     | Sine              | `sin(pi/2)`                                                         |
 | `cos()`     | Cosine            | `cos(3*pi/2)`                                                       |
 | `tan()`     | Tangent           | `tan(pi/4)`                                                         |
@@ -630,7 +630,7 @@ Duoght_rec
 `read_csv()` comes with many arguments that you can use to customize which parts of the file will be read in and how. Here are a few of the most useful:
 
 | Argument    | Description                                                                                                          |
-|-------------|----------------------------------------------------------------------------------------------------------------------|
+|--------------|----------------------------------------------------------|
 | `col_names` | Should the first row be read in as column names? Defaults to `TRUE`. Can also be a character vector of column names. |
 | `col_types` | Explicitly set the data type for each column.                                                                        |
 | `skip`      | Number of rows to skip before reading any data.                                                                      |
@@ -741,7 +741,7 @@ storm <- read_excel(path = "data/hazards.xlsx", sheet = 2)
 `read_excel()` comes with many arguments that you can use to customize which parts of the spreadsheet will be read in and how. Here are a few of the most useful:
 
 | Argument    | Description                                                                                                          |
-|-------------|----------------------------------------------------------------------------------------------------------------------|
+|--------------|----------------------------------------------------------|
 | `col_names` | Should the first row be read in as column names? Defaults to `TRUE`. Can also be a character vector of column names. |
 | `col_types` | Explicitly set the data type for each column.                                                                        |
 | `skip`      | Number of rows to skip before reading any data.                                                                      |

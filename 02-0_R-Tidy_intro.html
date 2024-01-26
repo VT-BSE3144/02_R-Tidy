@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 <ol start="2" type="1">
-<li>Work through the Posit Cloud R Basics Recipes, which are in this document below and also available here: <a href="https://posit.cloud/learn/primers">Posit Cloud R Basics Recipes</a>.</li>
+<li>Work through the Tidy Data and R Basics intro materials in this document below which are based in part on: <a href="https://posit.cloud/learn/primers">Posit Cloud R Basics Recipes</a>.</li>
 </ol>
 <p>Have a great weekend! Post any questions in Teams.</p>
 </section>
@@ -211,13 +211,13 @@ See the table below from datacarpentry.org that illustrates this concept:<br>
 <li><p>Use a data dictionary. Keep data in a data file, <strong>use a complimentary README file (or a metadata/annotation sheet)</strong> that contains ‘metadata’.</p>
 <ul>
 <li>This should include explanation of the variable, units, expected values (minimum and maximum). It may also include information about how the data was collected and how the experiment was performed.</li>
-<li><a href="images/VT_COVID-19_Cases_by_County_Time_Series_modify_README.rtf">There is an example README</a> from the Vermont Covid dashboard in the images folder, “images/VT_COVID-19_Cases_by_County_Time_Series_modify_README.rtf”.</li>
+<li><a href="images/Vermont-COVID-19">There is an example README</a> from the Vermont Covid dashboard in the images folder, “images/VT_COVID-19_Cases_by_County_Time_Series_modify_README.rtf”.</li>
 <li>This could be a txt file, rtf, html, csv or any other file type.</li>
 </ul></li>
 <li><p>Do not perform calculations in <strong>raw data files.</strong> Use a separate file for visualizations, calculations, analysis, etc.</p></li>
 <li><p>Do not use color or highlighting in data files. Rather, use a column that provides a note instead of highlighting cells. (This is because the color or highlighting is data! Every datum gets its own cell - #2.)</p></li>
-<li><p>Backup data. Use version control—if anything is added, updated, etc save a new version of the file..<img src="https://lh7-us.googleusercontent.com/ALzSEggRGgFN4VlD80lauv-jPQe7YS74Nuq28XAlFR-FQahwwH9AEBfm-B6fasHsrvF2zuFyy__aRqIi2b32NLg7Xzegare02lgfwiz2IEK9EEKZ9Tg7AI2FXACDQusKmA--YDsg9dM6JZ26XOr0aQs.png" class="img-fluid"></p></li>
-<li><p>Validate data. In Excel, Data → Validation (see icon at right), or Data → Data Validation in Google Sheets. Then you can set up logical rules to check that your columns of data contain valid values. Any values that don’t pass your logical test will be highlighted. To see the rules you have created <a href="https://support.microsoft.com/en-us/office/find-cells-that-have-data-validation-rules-7940468a-c95d-422f-a3fb-8fa0b90e5810">follow these instructions</a>.</p></li>
+<li><p>Backup data. Use version control—if anything is added, updated, etc save a new version of the file.</p></li>
+<li><p>Validate data. Excel, Data → Validation (see icon at right), or Data → Data Validation in Google Sheets. Then you can set up logical rules to check that your columns of data contain valid values (for example a column of percent values should be between 0 and 100). Any values that don’t pass your logical test will be highlighted. To see the rules you have created <a href="https://support.microsoft.com/en-us/office/find-cells-that-have-data-validation-rules-7940468a-c95d-422f-a3fb-8fa0b90e5810">follow these instructions</a>. In R you can write code to validate data. More on R code below!</p></li>
 <li><p>Save data in plain text files. Save as -&gt; Format -&gt; csv. Why? Simplified archive, preservation of data for future scientists and engineers. When data is saved in a proprietary format, sharing across versions/platforms and the future may be hampered.</p></li>
 </ol>
 <p>Also check out the useful list of <a href="https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f">shortcut keys in Excel</a>, or <a href="https://support.google.com/docs/answer/181110?visit_id=638102624813361659-1097526140&amp;p=spreadsheets_shortcuts&amp;rd=1">shortcut keys in Google Sheets</a>.</p>
@@ -234,9 +234,9 @@ See the table below from datacarpentry.org that illustrates this concept:<br>
 <p><strong>Step 1 - Write the mathematical expression you wish to evaluate.</strong> R recognizes the following operators:</p>
 <table class="table">
 <colgroup>
-<col style="width: 10%">
-<col style="width: 18%">
-<col style="width: 70%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 61%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -353,7 +353,7 @@ See the table below from datacarpentry.org that illustrates this concept:<br>
 <pre><code>[1] 42</code></pre>
 </div>
 </div>
-<p>Academy authors will use a special convention whenever we mention a function: we will write the function’s name in code font and follow it with a pair of parentheses, like this <code>sqrt()</code>.</p>
+<p>In markdown we will use a special convention whenever we mention a function: we will write the function’s name in code font and follow it with a pair of parentheses, like this <code>sqrt()</code>.</p>
 <p>R users have several names for the code that runs a function. You may see it referred to as:</p>
 <ul>
 <li><p>A command</p></li>
@@ -572,16 +572,16 @@ What happened to FALSE (is it a Boolean)? <em>answer here</em></p>
 <span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   x  y fac
-1  1  1   C
-2  1  2   A
-3  1  3   C
-4  1  4   C
-5  1  5   C
+1  1  1   B
+2  1  2   C
+3  1  3   A
+4  1  4   B
+5  1  5   A
 6  1  6   A
-7  1  7   C
-8  1  8   C
-9  1  9   A
-10 1 10   A</code></pre>
+7  1  7   B
+8  1  8   A
+9  1  9   C
+10 1 10   B</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -676,9 +676,9 @@ What is <code>LETTERS</code>? What is L3? <em>answer here</em></p>
 <p>Some of the most common mathematical functions in R are:</p>
 <table class="table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 18%">
-<col style="width: 68%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 61%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -926,8 +926,8 @@ date (3): Time_fornow_enddate, StartDate, EndDate
 <p><code>read_csv()</code> comes with many arguments that you can use to customize which parts of the file will be read in and how. Here are a few of the most useful:</p>
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 90%">
+<col style="width: 19%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1098,8 +1098,8 @@ lgl (1): duplicate
 <p><code>read_excel()</code> comes with many arguments that you can use to customize which parts of the spreadsheet will be read in and how. Here are a few of the most useful:</p>
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 90%">
+<col style="width: 19%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
