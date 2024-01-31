@@ -95,3 +95,26 @@ Using Tab-complete to make function calls will prevent errors!
 ### Factors
 
 ### Reading in data
+
+Let's practice reading in the HW excel file
+
+```{r}
+library(readxl)
+HW_data_file <- read_excel(path = "data/HW_Data_File.xlsx")
+
+
+```
+
+
+```{r}
+storm <- read_excel(path = "data/hazards.xlsx", sheet = 2)
+storm
+```
+
+How would we check that a variable only contains certain values?
+
+```{r}
+storm$monthly.ppt > 7
+
+```
+
