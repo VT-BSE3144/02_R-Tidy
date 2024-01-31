@@ -16,15 +16,20 @@ Using HW_Data_File.xlsx, which is in the data folder of this project, do the fol
 
 1.  Organize/create a spreadsheet following 12 basic principles. The end result should be a spreadsheet that is 13 rows by 5 columns for future data analysis.
 
-2.  Create a readme file (data dictionary) in plain text format that contains relevant information corresponding to the dataset. Include variable names, definitions, units, and original data source.
+2.  Create a data dictionary in plain text or markdown format that contains relevant information corresponding to the dataset. Include variable names, definitions, units, and original data source.
 
   *put your data dictionary here*
 
 3.  Validate the data using R code
     a. Read the data into R (upload your tidy dataset from 1, see the end of the intro document for `read_xlsx`, `read_csv`, and other `read_` functions, or use "Import Dataset..." from the File pane).
-    b. Check whether all "FFAs reduction %" values range between 0 and 100. If not, flag the variable.
+    b. Check whether all "FFAs reduction %" values range between 0 and 100. 
     c. Check whether all "cdw" values are numbers.
     d. Follow the 12 basic principles for consistency, numbers, validation, names.
+    
+```{r}
+
+```
+    
 
 ## Part II: R & Tidy
 
@@ -46,13 +51,18 @@ Calculations:
 4. (9-4)2 
 5. 800/2ˆ2
 
-### Exercise 2
+### Exercise 2 - coding calculations
 
 Engineering results frequently require unit conversions to share information appropriately with an audience. In the course Introduction to BSE, you learned about mass balances. In our field, we frequently measure the volume of a substance (e.g., water, chemical) through a place (e.g. pipe, river) over a given time. We call this a volumetric flux, with units of Lˆ3/T (L = length, T = time).
 
 Imagine you are on an international consulting team that is working on the design of a large food processing facility. While here in the US, we often use english units for length (e.g. feet) whereas most of the rest of the world uses the SI system (e.g., meters).
 
-Create an R-script in the code chunk below that converts a flowrate of ftˆ3/second to mˆ3/s. Include the following: - header - flowrate variable in ftˆ3/second that is equal to 1,500 - an equation that creates a new flowrate variable in mˆ3/s - the printed value of the new variable in mˆ3/s
+Create an R-script in the code chunk below that converts a flowrate of ftˆ3/second to mˆ3/s. Include the following: 
+
+- header (above the chunk in markdown, or commented out in the chunk) with a description of what the code does 
+- flowrate variable in ftˆ3/second that is equal to 1,500 
+- an equation that creates a new flowrate variable in mˆ3/s 
+- the printed value of the new variable in mˆ3/s
 
 After you create the script, run the script. In the grey box below on the upper right corner, the green arrow will run the contents within the grey box (in R-markdown, the grey box = chunk)
 
@@ -61,7 +71,7 @@ After you create the script, run the script. In the grey box below on the upper 
 ```
 
 
-### Exercise 3
+### Exercise 3 - using functions
 
 Here are some example functions:
 
@@ -101,7 +111,7 @@ Use these built-in functions to print the following items:
 
 8.  Assign a variable x to the value of 10.5. Look up both the ceiling and floor functions within R-base package. Using the appropriate function, assign a new variable y to 10 using only the appropriate function and x. In the output, show the value of y.
 
-### Exercise 4
+### Exercise 4 - using arguments
 
 Create the following vector object `numbers`. Then use code to print the requested values related to the vector. You'll need to use na.rm = TRUE to ignore the null values.
 
@@ -122,7 +132,7 @@ numbers <- c(7, 6, 22, 5, NA, 42)
 
 4.  The sum of the values in the numbers vector
 
-### Exercise 5
+### Exercise 5 - vector calculations
 
 Create the following vector, `numbers` and then use code to print the requested values related to the vector.
 
@@ -144,7 +154,7 @@ numbers <- c(5, 2, 26, 8, 16)
 
 7.  The sum of the values in the numbers vector (using the `sum` function)
 
-### Exercise 6
+### Exercise 6 - more vectors
 
 You have data on the length, width, and height of 10 individuals of the yew Taxus baccata stored in the following vectors:
 
@@ -170,7 +180,7 @@ Create the above vector objects and then determine the following:
 
 7.  A vector of the volumes of the last 5 shrubs with the code written so that it will return the last 5 values regardless of the length of the vector (i.e., it will give the last 5 values if their are 10, 20, or 50 individuals). 
 
-### Exercise 7
+### Exercise 7 - even more vectors
 
 Create the following variables using the described approach:
 
