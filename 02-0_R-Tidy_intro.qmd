@@ -736,6 +736,7 @@ Lastly, we assign the earthquake data frame read in by `read_excel()` to an obje
 
 ```{r}
 storm <- read_excel(path = "data/hazards.xlsx", sheet = 2)
+storm
 ```
 
 `read_excel()` comes with many arguments that you can use to customize which parts of the spreadsheet will be read in and how. Here are a few of the most useful:
