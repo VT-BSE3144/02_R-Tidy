@@ -85,7 +85,9 @@ What is a function?
 Using Tab-complete to make function calls will prevent errors!
 
 ```{r}
-is.numeric(x = table1$year)
+# test out writing a function using tab complete
+
+
 ```
 
 
@@ -109,12 +111,10 @@ storm
 Each column is a vector!
 
 ```{r}
-Date <- storm$Date
-is.vector(Date)
-class(Date)
-is.vector(storm$County)
-c(1, Date)
-Date[1]
+# check whether something is a vector with is.vector()
+
+
+# but some vectors are special like dates with formatting
 
 
 ```
@@ -123,9 +123,8 @@ Date[1]
 ## Data, tibbles, dataframes
 
 ```{r}
-storm
-summary(storm)
-head(storm)
+# use head(), summary(), or view() to look at data
+
 ```
 
 
@@ -134,11 +133,10 @@ head(storm)
 Factors are categorical variables.
 
 ```{r}
-is.factor(storm$Hazard)
-unique(storm$Hazard)
-iris
-iris$Species
-is.factor(x = iris$Species)
+# look at a factor variable
+
+# can you add new values to factors? 
+
 ```
 
 
