@@ -1,11 +1,10 @@
 ---
-title: "02-0_R_Tidy_intro"
-format: html
-toc: TRUE
-editor: visual
+output: html_document
+params:
+  version: 1.0
 ---
 
-# Week 2 - The R Language and Tidy Data
+# The R Language and Tidy Data
 
 This week is devoted to basic tutorials on R programming and using Tidy Data, building on our intro to Rstudio/Posit and Markdown last week. Just like learning a foreign language, to learn programming and get comfortable, you'll need to practice and immerse yourself! If you attempt to plow through in one sitting, unless you're a genius, you're unlikely to retain much. My suggestion is to start working early - start with either watching the assigned video or the reading. I've noted that you can choose one or the other; for extra reinforcement, read and watch (the video is only 15 minutes)! Then go ahead and get started with the in-class activities.
 
@@ -100,15 +99,15 @@ You want to use R to do simple arithmetic, as if R were a calculator.
 
 **Step 1 - Write the mathematical expression you wish to evaluate.** R recognizes the following operators:
 
-| Operator | Operation        | Example                                                            |
-|--------------|--------------|---------------------------------------------|
-| `+`      | Addition         | `1 + 2`                                                            |
-| `-`      | Subtraction      | `2 - 1`                                                            |
-| `*`      | Multiplication   | `2 * 3`                                                            |
-| `/`      | Division         | `4 / 2`                                                            |
-| `^`      | Exponentiation   | `4 ^ 2`, i.e. 4242                                                 |
-| `%%`     | Modulo           | `5 %% 3`, i.e what is the remainder when you divide five by three? |
-| `%/%`    | Integer division | `5 %/% 3`, i.e how many times does three go into five?             |
+| Operator | Operation | Example |
+|----------------|----------------|-----------------------------------------|
+| `+` | Addition | `1 + 2` |
+| `-` | Subtraction | `2 - 1` |
+| `*` | Multiplication | `2 * 3` |
+| `/` | Division | `4 / 2` |
+| `^` | Exponentiation | `4 ^ 2`, i.e. 4242 |
+| `%%` | Modulo | `5 %% 3`, i.e what is the remainder when you divide five by three? |
+| `%/%` | Integer division | `5 %/% 3`, i.e how many times does three go into five? |
 
 **Step 2 - Run the expression.** R will return the result.
 
@@ -482,16 +481,16 @@ cos(pi)
 
 Some of the most common mathematical functions in R are:
 
-| Function    | Operation         | Example                                                             |
-|--------------|--------------|--------------------------------------------|
-| `sin()`     | Sine              | `sin(pi/2)`                                                         |
-| `cos()`     | Cosine            | `cos(3*pi/2)`                                                       |
-| `tan()`     | Tangent           | `tan(pi/4)`                                                         |
-| `sign()`    | Sign              | `sign(-2)`, i.e. is -2 positive or negative?                        |
-| `log()`     | Natural logarithm | `log(2.718282)`                                                     |
-| `exp()`     | Exponential       | `exp(1)`                                                            |
-| `floor()`   | Integer floor     | `floor(pi)`, i.e. what is the largest integer less than `pi`?       |
-| `ceiling()` | Integer ceiling   | `ceiling(pi)`, i.e. what is the smallest integer greater than `pi`? |
+| Function | Operation | Example |
+|----------------|----------------|----------------------------------------|
+| `sin()` | Sine | `sin(pi/2)` |
+| `cos()` | Cosine | `cos(3*pi/2)` |
+| `tan()` | Tangent | `tan(pi/4)` |
+| `sign()` | Sign | `sign(-2)`, i.e. is -2 positive or negative? |
+| `log()` | Natural logarithm | `log(2.718282)` |
+| `exp()` | Exponential | `exp(1)` |
+| `floor()` | Integer floor | `floor(pi)`, i.e. what is the largest integer less than `pi`? |
+| `ceiling()` | Integer ceiling | `ceiling(pi)`, i.e. what is the smallest integer greater than `pi`? |
 
 ## Tidyverse tables
 
@@ -629,12 +628,12 @@ Duoght_rec
 
 `read_csv()` comes with many arguments that you can use to customize which parts of the file will be read in and how. Here are a few of the most useful:
 
-| Argument    | Description                                                                                                          |
-|--------------|----------------------------------------------------------|
+| Argument | Description |
+|-----------------|-------------------------------------------------------|
 | `col_names` | Should the first row be read in as column names? Defaults to `TRUE`. Can also be a character vector of column names. |
-| `col_types` | Explicitly set the data type for each column.                                                                        |
-| `skip`      | Number of rows to skip before reading any data.                                                                      |
-| `guess_max` | Maximum number of lines to read for guessing column types.                                                           |
+| `col_types` | Explicitly set the data type for each column. |
+| `skip` | Number of rows to skip before reading any data. |
+| `guess_max` | Maximum number of lines to read for guessing column types. |
 
 Read the help page at `?read_csv` to learn more.
 
@@ -741,11 +740,11 @@ storm
 
 `read_excel()` comes with many arguments that you can use to customize which parts of the spreadsheet will be read in and how. Here are a few of the most useful:
 
-| Argument    | Description                                                                                                          |
-|--------------|----------------------------------------------------------|
+| Argument | Description |
+|-----------------|-------------------------------------------------------|
 | `col_names` | Should the first row be read in as column names? Defaults to `TRUE`. Can also be a character vector of column names. |
-| `col_types` | Explicitly set the data type for each column.                                                                        |
-| `skip`      | Number of rows to skip before reading any data.                                                                      |
-| `range`     | Specify a subset of cells to read in.                                                                                |
+| `col_types` | Explicitly set the data type for each column. |
+| `skip` | Number of rows to skip before reading any data. |
+| `range` | Specify a subset of cells to read in. |
 
 Read the help page at `?read_excel` to learn more.

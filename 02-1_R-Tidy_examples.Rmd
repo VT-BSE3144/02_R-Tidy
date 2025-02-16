@@ -1,8 +1,10 @@
 ---
-title: "02-1_R_Tidy_Inclass"
-format: html
-editor: visual
+output: html_document
+params:
+  version: 1.0
 ---
+# The R Language and Tidy Data Examples {1}
+
 ```{r setup, include=FALSE}
 # Load packages 
 library(tidyverse)
@@ -12,7 +14,7 @@ library(tidyverse)
 
 ## Tidy Data
 
-Each of the following datasets shows TB cases and some other variables per country organized in different ways. 
+Each of the following datasets shows TB cases and some other variables per country organized in different ways.
 
 ```{r}
 table1
@@ -29,9 +31,9 @@ table4b  # population
 
 There are three interrelated rules which make a dataset tidy:
 
-- Each variable must have its own column.
-- Each observation must have its own row.
-- Each value must have its own cell.
+-   Each variable must have its own column.
+-   Each observation must have its own row.
+-   Each value must have its own cell.
 
 ![](https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png)
 
@@ -58,10 +60,7 @@ There’s a specific advantage to placing variables in columns because it allows
 
 ### Let's make a data dictionary for this dataset
 
-`country` = The country in which TB case data was reported.
-`year` = Calendar year
-`cases` = Test-positive cases with culture-based and ELISA-based tests in these countries with sample dates within the year above. 
-`population` = The self-reported population of each country according to their census data. 
+`country` = The country in which TB case data was reported. `year` = Calendar year `cases` = Test-positive cases with culture-based and ELISA-based tests in these countries with sample dates within the year above. `population` = The self-reported population of each country according to their census data.
 
 ## R Basics
 
@@ -80,15 +79,15 @@ You can create objects (variables\~values, large data structures\~think spreadsh
 
 ## Functions
 
-What is a function? 
+What is a function?
 
 `function_name(argument_name = argument_value)`
 
 Using Tab-complete to make function calls will prevent errors!
 
-## Objects 
+## Objects
 
-### Vectors 
+### Vectors
 
 ## Data, tibbles, dataframes
 
@@ -105,7 +104,6 @@ HW_data_file <- read_excel(path = "data/HW_Data_File.xlsx")
 
 ```
 
-
 ```{r}
 storm <- read_excel(path = "data/hazards.xlsx", sheet = 2)
 storm
@@ -117,4 +115,3 @@ How would we check that a variable only contains certain values?
 storm$monthly.ppt > 7
 
 ```
-
