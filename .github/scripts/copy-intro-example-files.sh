@@ -12,6 +12,7 @@ function l { # Log a message to the terminal.
 INTRO_EXAMPLE_FILES=$(ls | grep -E '^[0-9]+-(0_Intro|0_intro|1_Examples)\.(Rmd|qmd)$')
 DIRECTORIES=$(ls | grep -E '(Data|data|Images|images|Figures|figures)')
 echo $INTRO_EXAMPLE_FILES
+echo $DIRECTORIES
 
 # if the file exists in Materials, copy it to Bookdown repo
 #if [ -f "$INTRO_EXAMPLE_FILES" ]; then
