@@ -26,7 +26,7 @@ jobs:
     - name: Copy Intro and Example files
       run: bash ./.github/scripts/copy-intro-example-files.sh
       env:
-        DESTINATION_PATH: ./bookdown/
+        DESTINATION_PATH: ./bookdown
     # make a branch in notehub-js repo and push the copy of the openapi file there
     - name: Push to bookdown repo
       run: bash ./.github/scripts/push-materials-to-bookdown.sh
