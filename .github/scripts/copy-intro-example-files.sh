@@ -27,12 +27,13 @@ ls ./bookdown -a
 
 
 # if the directory exists in Materials, copy it to Bookdown repo
-if [ -f "$DIRECTORIES" ]; then
     for dir in $DIRECTORIES; do
         echo "Processing: $dir"
-        cp -R $dir $DESTINATION_PATH/$dir
+        files=$(ls $dir)
+        for file in $files; do
+            cp -R $file $DESTINATION_PATH/$dir
+        done
     done
-fi
 
 
 echo "Directories copied to $DESTINATION_PATH"
