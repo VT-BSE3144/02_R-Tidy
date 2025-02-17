@@ -12,8 +12,6 @@ params:
 library(tidyverse)
 ```
 
-## Questions
-
 ## Tidy Data
 
 Each of the following datasets shows TB cases and some other variables per country organized in different ways.
@@ -79,7 +77,7 @@ You can create objects (variables\~values, large data structures\~think spreadsh
 | Complex   |             | 3 + 2i                              |
 | Raw       | hexadecimal | "Hello" is stored as 48 65 6c 6c 6f |
 
-## Functions
+### Functions
 
 What is a function?
 
@@ -88,7 +86,7 @@ What is a function?
 Using Tab-complete to make function calls will prevent errors!
 
 
-## Objects
+### Objects
 
 An object is essentially anything that shows up in the Environment pane!
 
@@ -99,6 +97,9 @@ An object is essentially anything that shows up in the Environment pane!
 ### Vectors
 
 To demonstrate what a vector is let's load some data!
+
+## Data, tibbles, dataframes
+
 
 ### Reading in data
 
@@ -120,7 +121,6 @@ Each column is a vector!
 ```
 
 
-## Data, tibbles, dataframes
 
 ```{r}
 # use head(), summary(), or view() to look at data
