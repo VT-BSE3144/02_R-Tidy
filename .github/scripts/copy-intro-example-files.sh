@@ -36,4 +36,4 @@ fi
 
 
 echo "Directories copied to $DESTINATION_PATH"
-ls-a
+ls -a
