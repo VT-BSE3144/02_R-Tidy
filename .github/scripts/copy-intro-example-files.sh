@@ -23,7 +23,7 @@ echo $DIRECTORIES
     done
 #fi    
 echo "Intro and Example files copied to $DESTINATION_PATH"
-ls -a
+ls ./bookdown -a
 
 
 # if the directory exists in Materials, copy it to Bookdown repo
@@ -36,4 +36,4 @@ fi
 
 
 echo "Directories copied to $DESTINATION_PATH"
-ls -a
+ls ./bookdown -a
