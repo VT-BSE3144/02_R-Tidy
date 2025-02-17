@@ -22,9 +22,9 @@ echo $DIRECTORIES
         cp -R $file $DESTINATION_PATH/$file
     done
 #fi    
+echo "Intro and Example files copied to $DESTINATION_PATH"
 ls -a
 
-echo "Intro and Example files copied to $DESTINATION_PATH"
 
 # if the directory exists in Materials, copy it to Bookdown repo
 if [ -f "$DIRECTORIES" ]; then
@@ -34,4 +34,6 @@ if [ -f "$DIRECTORIES" ]; then
     done
 fi
 
+
 echo "Directories copied to $DESTINATION_PATH"
+ls-a
