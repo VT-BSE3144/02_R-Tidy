@@ -31,7 +31,7 @@ ls ./bookdown -a
         echo "Processing: $dir"
         files=$(ls $dir)
         for file in $files; do
-            cp -R $file $DESTINATION_PATH/$dir
+            cp -R $dir/$file $DESTINATION_PATH/$dir
         done
     done
 
