@@ -24,7 +24,7 @@ if [[ $EXIT_CODE == "0" ]]; then
   git fetch
   ls -a
   # stash currently copied files
-  git stash -u
+  git stash 
   ls -a
   # check out existing branch from bookdown
   git checkout $BRANCH 
