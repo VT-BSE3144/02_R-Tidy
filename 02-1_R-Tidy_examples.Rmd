@@ -3,7 +3,9 @@ output: html_document
 params:
   version: 1.0
 ---
-# The R Language and Tidy Data Examples {1}
+
+# The R Language and Tidy Data Examples {-}
+
 
 ```{r setup, include=FALSE}
 # Load packages 
@@ -85,29 +87,59 @@ What is a function?
 
 Using Tab-complete to make function calls will prevent errors!
 
+
 ## Objects
+
+An object is essentially anything that shows up in the Environment pane!
+
+- functions
+- variables
+- data objects
 
 ### Vectors
 
-## Data, tibbles, dataframes
-
-### Factors
+To demonstrate what a vector is let's load some data!
 
 ### Reading in data
 
-Let's practice reading in the HW excel file
-
-```{r}
-library(readxl)
-HW_data_file <- read_excel(path = "data/HW_Data_File.xlsx")
-
-
-```
 
 ```{r}
 storm <- read_excel(path = "data/hazards.xlsx", sheet = 2)
 storm
 ```
+
+Each column is a vector!
+
+```{r}
+# check whether something is a vector with is.vector()
+
+
+# but some vectors are special like dates with formatting
+
+
+```
+
+
+## Data, tibbles, dataframes
+
+```{r}
+# use head(), summary(), or view() to look at data
+
+```
+
+
+### Factors
+
+Factors are categorical variables.
+
+```{r}
+# look at a factor variable
+
+# can you add new values to factors? 
+
+```
+
+
 
 How would we check that a variable only contains certain values?
 
@@ -115,3 +147,4 @@ How would we check that a variable only contains certain values?
 storm$monthly.ppt > 7
 
 ```
+
