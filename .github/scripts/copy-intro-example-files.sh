@@ -29,6 +29,7 @@ ls ./bookdown -a
 # if the directory exists in Materials, copy it to Bookdown repo
     for dir in $DIRECTORIES; do
         echo "Processing: $dir"
+        mkdir -p $DESTINATION_PATH$dir
         files=$(ls $dir)
         for file in $files; do
             cp -R $dir/$file $DESTINATION_PATH$dir/$file
